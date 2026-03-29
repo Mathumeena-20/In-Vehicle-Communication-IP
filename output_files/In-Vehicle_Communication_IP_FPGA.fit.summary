@@ -1,0 +1,20 @@
+Fitter Status : Successful - Sun Mar 29 09:35:33 2026
+Quartus Prime Version : 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
+Revision Name : In-Vehicle_Communication_IP_FPGA
+Top-level Entity Name : can_fd_top
+Family : Cyclone V
+Device : 5CGXFC7C6F23C6
+Timing Models : Final
+Logic utilization (in ALMs) : 201 / 56,480 ( < 1 % )
+Total registers : 426
+Total pins : 82 / 268 ( 31 % )
+Total virtual pins : 0
+Total block memory bits : 97 / 7,024,640 ( < 1 % )
+Total RAM Blocks : 1 / 686 ( < 1 % )
+Total DSP Blocks : 0 / 156 ( 0 % )
+Total HSSI RX PCSs : 0 / 6 ( 0 % )
+Total HSSI PMA RX Deserializers : 0 / 6 ( 0 % )
+Total HSSI TX PCSs : 0 / 6 ( 0 % )
+Total HSSI PMA TX Serializers : 0 / 6 ( 0 % )
+Total PLLs : 0 / 13 ( 0 % )
+Total DLLs : 0 / 4 ( 0 % )

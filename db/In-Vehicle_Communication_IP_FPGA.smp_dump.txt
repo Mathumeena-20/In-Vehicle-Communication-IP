@@ -1,0 +1,17 @@
+
+State Machine - |can_fd_top|can_fd_rx:rx|state
+Name state.IDLE state.DONE state.RECEIVE 
+state.IDLE 0 0 0 
+state.RECEIVE 1 0 1 
+state.DONE 1 1 0 
+
+State Machine - |can_fd_top|can_fd_tx:tx|state
+Name state.EOF state.ACK state.CRC state.DATA state.CTRL state.ARB state.SOF state.IDLE 
+state.IDLE 0 0 0 0 0 0 0 0 
+state.SOF 0 0 0 0 0 0 1 1 
+state.ARB 0 0 0 0 0 1 0 1 
+state.CTRL 0 0 0 0 1 0 0 1 
+state.DATA 0 0 0 1 0 0 0 1 
+state.CRC 0 0 1 0 0 0 0 1 
+state.ACK 0 1 0 0 0 0 0 1 
+state.EOF 1 0 0 0 0 0 0 1 

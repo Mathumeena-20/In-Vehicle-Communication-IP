@@ -1,0 +1,3 @@
+Info (10281): Verilog HDL Declaration information at can_fd_top.v(27): object "TX_ID" differs only in case from object "tx_id" in the same scope File: D:/VLSI/In-Vehicle Communication IP (CAN + CAN-FD)/RTL/top/can_fd_top.v Line: 27
+Info (10281): Verilog HDL Declaration information at can_fd_top.v(27): object "TX_DATA" differs only in case from object "tx_data" in the same scope File: D:/VLSI/In-Vehicle Communication IP (CAN + CAN-FD)/RTL/top/can_fd_top.v Line: 27
+Info (10281): Verilog HDL Declaration information at can_fd_tx.v(9): object "crc" differs only in case from object "CRC" in the same scope File: D:/VLSI/In-Vehicle Communication IP (CAN + CAN-FD)/RTL/tx/can_fd_tx.v Line: 9

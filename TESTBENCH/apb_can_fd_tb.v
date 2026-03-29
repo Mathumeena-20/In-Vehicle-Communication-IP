@@ -1,0 +1,164 @@
+module apb_can_fd_tb;
+
+//////////////////////////////////////////////////
+// CLOCK
+//////////////////////////////////////////////////
+reg clk = 0;
+always #5 clk = ~clk;
+
+//////////////////////////////////////////////////
+// APB SIGNALS
+//////////////////////////////////////////////////
+reg PCLK;
+reg PRESETn;
+reg PSEL;
+reg PENABLE;
+reg PWRITE;
+reg [7:0] PADDR;
+reg [31:0] PWDATA;
+wire [31:0] PRDATA;
+
+//////////////////////////////////////////////////
+// CAN SIGNALS
+//////////////////////////////////////////////////
+wire can_tx;
+wire can_rx;
+wire irq;
+
+// Loopback
+assign can_rx = can_tx;
+
+//////////////////////////////////////////////////
+// DUT
+//////////////////////////////////////////////////
+can_fd_top dut (
+    .clk(clk),
+    .rst_n(PRESETn),
+
+    .PCLK(clk),
+    .PRESETn(PRESETn),
+    .PSEL(PSEL),
+    .PENABLE(PENABLE),
+    .PWRITE(PWRITE),
+    .PADDR(PADDR),
+    .PWDATA(PWDATA),
+    .PRDATA(PRDATA),
+
+    .can_tx(can_tx),
+    .can_rx(can_rx),
+    .irq(irq)
+);
+
+//////////////////////////////////////////////////
+// APB CLOCK
+//////////////////////////////////////////////////
+always #5 PCLK = ~PCLK;
+
+//////////////////////////////////////////////////
+// APB WRITE TASK
+//////////////////////////////////////////////////
+task apb_write;
+    input [7:0] addr;
+    input [31:0] data;
+begin
+    @(posedge PCLK);
+    PSEL   = 1;
+    PWRITE = 1;
+    PADDR  = addr;
+    PWDATA = data;
+    PENABLE = 0;
+
+    @(posedge PCLK);
+    PENABLE = 1;
+
+    @(posedge PCLK);
+    PSEL = 0;
+    PENABLE = 0;
+end
+endtask
+
+//////////////////////////////////////////////////
+// APB READ TASK
+//////////////////////////////////////////////////
+task apb_read;
+    input [7:0] addr;
+begin
+    @(posedge PCLK);
+    PSEL   = 1;
+    PWRITE = 0;
+    PADDR  = addr;
+    PENABLE = 0;
+
+    @(posedge PCLK);
+    PENABLE = 1;
+
+    @(posedge PCLK);
+    $display("READ ADDR %h DATA = %h", addr, PRDATA);
+
+    PSEL = 0;
+    PENABLE = 0;
+end
+endtask
+
+//////////////////////////////////////////////////
+// TEST SEQUENCE
+//////////////////////////////////////////////////
+initial begin
+
+    // Init
+    PCLK = 0;
+    PRESETn = 0;
+    PSEL = 0;
+    PENABLE = 0;
+    PWRITE = 0;
+    PADDR = 0;
+    PWDATA = 0;
+
+    #20 PRESETn = 1;
+
+    //////////////////////////////////////////
+    // CONFIGURE FILTER
+    //////////////////////////////////////////
+    apb_write(8'h20, 32'h00000123); // FILTER_ID
+    apb_write(8'h24, 32'h000007FF); // MASK
+
+    //////////////////////////////////////////
+    // WRITE TX ID
+    //////////////////////////////////////////
+    apb_write(8'h08, 32'h00000123);
+
+    //////////////////////////////////////////
+    // WRITE TX DATA
+    //////////////////////////////////////////
+    apb_write(8'h0C, 32'hAABBCCDD);
+
+    //////////////////////////////////////////
+    // START TRANSMISSION (CAN MODE)
+    //////////////////////////////////////////
+    // CTRL[0]=start, CTRL[1]=mode_fd
+    apb_write(8'h00, 32'h00000001);
+
+    #200;
+
+    //////////////////////////////////////////
+    // START CAN-FD MODE
+    //////////////////////////////////////////
+    apb_write(8'h00, 32'h00000003);
+
+    #200;
+
+    //////////////////////////////////////////
+    // READ BACK (OPTIONAL)
+    //////////////////////////////////////////
+    apb_read(8'h08);
+    apb_read(8'h0C);
+
+    //////////////////////////////////////////
+    // FINISH
+    //////////////////////////////////////////
+    #500;
+    $finish;
+
+end
+
+endmodule

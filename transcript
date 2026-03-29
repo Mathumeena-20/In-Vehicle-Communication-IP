@@ -1,0 +1,66 @@
+# vsim apb_can_fd_tb 
+# Start time: 22:36:44 on Mar 28,2026
+# Loading work.apb_can_fd_tb
+# Loading work.can_fd_top
+# Loading work.apb_slave
+# Loading work.bit_timing
+# Loading work.crc
+# Loading work.error_manager
+# Loading work.can_fd_tx
+# Loading work.bit_stuff
+# Loading work.can_fd_rx
+# Loading work.bit_destuff
+# Loading work.acceptance_filter
+# Loading work.interrupt_ctrl
+add wave -r *
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: svvb7  Hostname: LAPTOP-FG3HRTAB  ProcessID: 22272
+#           Attempting to use alternate WLF file "./wlftvak1ix".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftvak1ix
+run -all
+# READ ADDR 08 DATA = 00000123
+# READ ADDR 0c DATA = aabbccdd
+# ** Note: $finish    : TESTBENCH/apb_can_fd_tb.v(160)
+#    Time: 1135 ps  Iteration: 0  Instance: /apb_can_fd_tb
+# 1
+# Break in Module apb_can_fd_tb at TESTBENCH/apb_can_fd_tb.v line 160
+delete wave *
+add wave -divider "==== APB ===="
+add wave sim:/apb_can_fd_tb/PSEL
+add wave sim:/apb_can_fd_tb/PENABL
+# ** UI-Msg: (vish-4014) No objects found matching '/apb_can_fd_tb/PENABL'.
+add wave sim:/apb_can_fd_tb/PENABLE
+add wave sim:/apb_can_fd_tb/PADDR
+add wave sim:/apb_can_fd_tb/PWDATA
+add wave -divider "==== CLOCK ===="
+add wave sim:/apb_can_fd_tb/clk
+add wave sim:/apb_can_fd_tb/pclk
+# (vish-4014) No objects found matching 'sim:/apb_can_fd_tb/pclk'.
+add wave sim:/apb_can_fd_tb/PCLK
+add wave sim:/apb_can_fd_t/PRESETn
+# ** UI-Msg: (vish-4014) No objects found matching '/apb_can_fd_t/PRESETn'.
+add wave sim:/apb_can_fd_tb/PRESETn
+add wave -divider "==== CAN BUS ===="
+add wave sim:/apb_can_fd_tb/dut/can_tx
+add wave sim:/apb_can_fd_tb/dut/can_rx
+add wave -divider "==== TX ===="
+add wave sim:/apb_can_fd_tb/dut/tx/state
+add wave sim:/apb_can_fd_tb/dut/tx/bit_cnt
+add wave sim:/apb_can_fd_tb/dut/tx/tx_success
+add wave sim:/apb_can_fd_tb/dut/tx/arb_lost
+add wave -divider "==== STATUS ===="
+add wave sim:/apb_can_fd_tb/dut/irq
+add wave sim:/apb_can_fd_tb/dut/err_mgr/TEC
+add wave sim:/apb_can_fd_tb/dut/err_mgr/REC
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run -all
+# READ ADDR 08 DATA = 00000123
+# READ ADDR 0c DATA = aabbccdd
+# ** Note: $finish    : TESTBENCH/apb_can_fd_tb.v(160)
+#    Time: 1135 ps  Iteration: 0  Instance: /apb_can_fd_tb
+# 1
+# Break in Module apb_can_fd_tb at TESTBENCH/apb_can_fd_tb.v line 160
+# End time: 18:25:38 on Mar 29,2026, Elapsed time: 19:48:54
+# Errors: 0, Warnings: 0

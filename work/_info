@@ -1,0 +1,407 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/VLSI/In-Vehicle Communication IP (CAN + CAN-FD)
+vacceptance_filter
+Z1 !s110 1774717443
+!i10b 1
+!s100 W4h@M_RTY_T5Pi=ThXg4H0
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+ITiL]Jg3G?:XH[QTW5AZ6=0
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1774526170
+8RTL/protocol/acceptance_filter.v
+FRTL/protocol/acceptance_filter.v
+!i122 1
+L0 1 10
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1774717443.000000
+Z6 !s107 RTL/protocol/interrupt_ctrl.v|RTL/protocol/error_manager.v|RTL/protocol/error_handler.v|RTL/protocol/crc.v|RTL/protocol/bit_stuff.v|RTL/protocol/bit_destuff.v|RTL/protocol/arbitration.v|RTL/protocol/acceptance_filter.v|
+Z7 !s90 RTL/protocol/acceptance_filter.v|RTL/protocol/arbitration.v|RTL/protocol/bit_destuff.v|RTL/protocol/bit_stuff.v|RTL/protocol/crc.v|RTL/protocol/error_handler.v|RTL/protocol/error_manager.v|RTL/protocol/interrupt_ctrl.v|
+!i113 1
+Z8 tCvgOpt 0
+vapb_can_fd_tb
+Z9 !s110 1774717553
+!i10b 1
+!s100 8=hoR?7X8aF7>@gD0<mYT3
+R2
+I`_zZ^7mQ6T7FG>MWngJnT3
+R3
+R0
+w1774544928
+8TESTBENCH/apb_can_fd_tb.v
+FTESTBENCH/apb_can_fd_tb.v
+!i122 5
+L0 1 164
+R4
+r1
+!s85 0
+31
+Z10 !s108 1774717553.000000
+!s107 TESTBENCH/can_fd_tb.v|TESTBENCH/apb_can_fd_tb.v|
+Z11 !s90 TESTBENCH/apb_can_fd_tb.v|TESTBENCH/can_fd_tb.v|
+!i113 1
+R8
+vapb_slave
+Z12 !s110 1774717524
+!i10b 1
+!s100 ;jVdl;JdolkU]fh?Im[HJ2
+R2
+IV`:^jA[EZnKIL@CQKjNI>0
+R3
+R0
+w1774526105
+8RTL/top/apb_slave.v
+FRTL/top/apb_slave.v
+!i122 4
+L0 1 49
+R4
+r1
+!s85 0
+31
+Z13 !s108 1774717524.000000
+Z14 !s107 RTL/top/can_fd_top.v|RTL/top/apb_slave.v|
+Z15 !s90 RTL/top/apb_slave.v|RTL/top/can_fd_top.v|
+!i113 1
+R8
+varbitration
+R1
+!i10b 1
+!s100 S1UmN@3bo[9W<]c:D2n?90
+R2
+IJS89l;^7][dfG5lS`@<582
+R3
+R0
+w1774543103
+8RTL/protocol/arbitration.v
+FRTL/protocol/arbitration.v
+!i122 1
+Z16 L0 1 20
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 1
+R8
+vbit_destuff
+R1
+!i10b 1
+!s100 o3:K77[Dz953O:7_e^dBo3
+R2
+ImoXajkBDBl;?dAl>6[afH3
+R3
+R0
+w1774617149
+8RTL/protocol/bit_destuff.v
+FRTL/protocol/bit_destuff.v
+!i122 1
+L0 1 34
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 1
+R8
+vbit_stuff
+R1
+!i10b 1
+!s100 EUa8iRY`I75^^CJkFSV?A1
+R2
+IFG`cSnEB_PL=NFQc0N<2^2
+R3
+R0
+w1774620264
+8RTL/protocol/bit_stuff.v
+FRTL/protocol/bit_stuff.v
+!i122 1
+L0 1 32
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 1
+R8
+vbit_timing
+Z17 !s110 1774717418
+!i10b 1
+!s100 DLl:gz3zzO;1Bj0JSGlbl3
+R2
+I3WGE_z1iTSPCdE:bhk5Y?3
+R3
+R0
+w1774525463
+8RTL/common/bit_timing.v
+FRTL/common/bit_timing.v
+!i122 0
+Z18 L0 1 24
+R4
+r1
+!s85 0
+31
+Z19 !s108 1774717418.000000
+Z20 !s107 RTL/common/fifo.v|RTL/common/bit_timing.v|
+Z21 !s90 RTL/common/bit_timing.v|RTL/common/fifo.v|
+!i113 1
+R8
+vcan_fd_rx
+Z22 !s110 1774717502
+!i10b 1
+!s100 d3UaM=gU8TZLGQ3D_06?81
+R2
+IZ63Hc:8QOhQNYcbaEG;IY2
+R3
+R0
+w1774716009
+8RTL/rx/can_fd_rx.v
+FRTL/rx/can_fd_rx.v
+!i122 3
+L0 1 160
+R4
+r1
+!s85 0
+31
+Z23 !s108 1774717502.000000
+Z24 !s107 RTL/rx/rx_fsm.v|RTL/rx/can_fd_rx.v|
+Z25 !s90 RTL/rx/can_fd_rx.v|RTL/rx/rx_fsm.v|
+!i113 1
+R8
+vcan_fd_tb
+R9
+!i10b 1
+!s100 LdGfbD1IoJS=ZU0ETk]8N2
+R2
+I4HDkZ[:P>L_`ccSSfF1L21
+R3
+R0
+w1774525658
+8TESTBENCH/can_fd_tb.v
+FTESTBENCH/can_fd_tb.v
+!i122 5
+L0 1 54
+R4
+r1
+!s85 0
+31
+R10
+Z26 !s107 TESTBENCH/can_fd_tb.v|TESTBENCH/apb_can_fd_tb.v|
+R11
+!i113 1
+R8
+vcan_fd_top
+R12
+!i10b 1
+!s100 ]OV6OCU5=VAQma6U9RSR]3
+R2
+IJS94cW4`mmFZU8Cie>3>l0
+R3
+R0
+w1774717318
+8RTL/top/can_fd_top.v
+FRTL/top/can_fd_top.v
+!i122 4
+L0 1 175
+R4
+r1
+!s85 0
+31
+R13
+R14
+R15
+!i113 1
+R8
+vcan_fd_tx
+Z27 !s110 1774717470
+!i10b 1
+!s100 C?Fo_bORm8FmRgD=LoZDE2
+R2
+I18F`7CF5?ozj<ZIEh9Jn43
+R3
+R0
+w1774716943
+8RTL/tx/can_fd_tx.v
+FRTL/tx/can_fd_tx.v
+!i122 2
+L0 1 153
+R4
+r1
+!s85 0
+31
+Z28 !s108 1774717470.000000
+Z29 !s107 RTL/tx/tx_fsm.v|RTL/tx/can_fd_tx.v|
+Z30 !s90 RTL/tx/can_fd_tx.v|RTL/tx/tx_fsm.v|
+!i113 1
+R8
+vcrc
+R1
+!i10b 1
+!s100 [7H>4B1VcTf]]B5:H;TH03
+R2
+IP]RbFhV]kZIU4=a1NGf[O2
+R3
+R0
+w1774525498
+8RTL/protocol/crc.v
+FRTL/protocol/crc.v
+!i122 1
+R18
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 1
+R8
+verror_handler
+R1
+!i10b 1
+!s100 Ta<T=B^PLfmPQ=o8P7A0@0
+R2
+IVEl2j<H>GHGUlEaCCRMUZ2
+R3
+R0
+w1774525551
+8RTL/protocol/error_handler.v
+FRTL/protocol/error_handler.v
+!i122 1
+R16
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 1
+R8
+verror_manager
+R1
+!i10b 1
+!s100 VW_MSSVe4fHlPUJ=BN_3^1
+R2
+Ibnl;zB=[0i6`2em6>a=l41
+R3
+R0
+w1774542774
+8RTL/protocol/error_manager.v
+FRTL/protocol/error_manager.v
+!i122 1
+L0 1 57
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 1
+R8
+vfifo
+R17
+!i10b 1
+!s100 G_WK<3>56?kB3^45Dn:mO2
+R2
+I11:VfKJh8<WD3l2D4Jo5c1
+R3
+R0
+w1774525478
+8RTL/common/fifo.v
+FRTL/common/fifo.v
+!i122 0
+L0 1 39
+R4
+r1
+!s85 0
+31
+R19
+R20
+R21
+!i113 1
+R8
+vinterrupt_ctrl
+R1
+!i10b 1
+!s100 zjBXcN:_Z05;dcT4ZaD4A3
+R2
+II_3XjH0:zf8R8Ao3hhk4E2
+R3
+R0
+w1774526205
+8RTL/protocol/interrupt_ctrl.v
+FRTL/protocol/interrupt_ctrl.v
+!i122 1
+L0 1 28
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 1
+R8
+vrx_fsm
+R22
+!i10b 1
+!s100 fYG2kF8IKFnM]<W:TLO@O0
+R2
+I=zaeM?Cca_gYk:66[Pbbk3
+R3
+R0
+w1774525610
+8RTL/rx/rx_fsm.v
+FRTL/rx/rx_fsm.v
+!i122 3
+L0 1 22
+R4
+r1
+!s85 0
+31
+R23
+R24
+R25
+!i113 1
+R8
+vtx_fsm
+R27
+!i10b 1
+!s100 P66bDXeFzgIP[WI6QQo^b2
+R2
+I1Fm@_KZKjU>Sd_J<gKAkF1
+R3
+R0
+w1774525573
+8RTL/tx/tx_fsm.v
+FRTL/tx/tx_fsm.v
+!i122 2
+L0 1 27
+R4
+r1
+!s85 0
+31
+R28
+R29
+R30
+!i113 1
+R8

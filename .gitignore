@@ -1,0 +1,22 @@
+# Quartus files
+db/
+incremental_db/
+output_files/
+
+# Simulation
+work/
+*.wlf
+*.log
+
+# Reports
+*.rpt
+*.summary
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
