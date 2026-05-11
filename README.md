@@ -1,4 +1,4 @@
-## ## 🚗 In-Vehicle-Communication-IP
+## 🚗 In-Vehicle-Communication-IP
 
 ![GitHub stars](https://img.shields.io/github/stars/Mathumeena-20/APB-UART-Controller?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/Mathumeena-20/APB-UART-Controller?style=social)
