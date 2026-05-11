@@ -1,3 +1,12 @@
+## ## 🚗 In-Vehicle-Communication-IP
+
+![GitHub stars](https://img.shields.io/github/stars/Mathumeena-20/APB-UART-Controller?style=social)
+![GitHub forks](https://img.shields.io/github/forks/Mathumeena-20/APB-UART-Controller?style=social)
+![License](https://img.shields.io/badge/license-MIT-blue)
+![Verilog](https://img.shields.io/badge/Language-Verilog-orange)
+
+---
+
 # 🚗 CAN + CAN-FD IP Core Documentation
 
 📡 Verilog | FPGA | Automotive Communication
